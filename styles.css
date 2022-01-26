@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* background colors and hover states */
+    --bright-orange: hsl(31, 77%, 52%);
+
+    --dark-cyan: hsl(184, 100%, 22%);
+
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* colors and button borders */
+    --white: hsl(0, 0%, 100%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+
+
+*,
+*:before,
+*:after {
+
+    box-sizing: inherit;
+}
+
+html {
+    /* size */
+    box-sizing: border-box;
+    /* set 1rem=10px */
+    font-size: 62.5%;
+
+
+
+    /* background */
+    background-color: var(--very-light-gray);
+}
+
+/* ########## Mobile first ########## */
+body {
+
+    /* Typographie */
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--transparent-white);
+    text-align: left;
+
+    /* size and space */
+    margin: 7rem auto;
+    padding: 0;
+    width: 90%;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    /* typographie */
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    color: var(--white);
+    font-size: 3.2rem;
+
+    /* space */
+    margin-top: 0;
+    padding-top: 2rem;
+}
+
+p {
+    margin-bottom: 2.3rem;
+}
+
+div.luxury {
+    background-image: url(images/icon-luxury.svg);
+}
+
+div.sedans {
+    background-image: url(images/icon-sedans.svg);
+}
+
+div.suvs {
+    background-image: url(images/icon-suvs.svg);
+}
+
+div.luxury,
+div.sedans,
+div.suvs {
+    /* size and space */
+    width: 30%;
+    max-width: 13rem;
+    height: 5rem;
+
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+article:first-of-type {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+article:nth-of-type(2) {
+    background-color: var(--dark-cyan);
+}
+
+article:last-of-type {
+    background-color: var(--very-dark-cyan);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+article {
+    padding: 4rem 4rem 4rem 4rem;
+}
+
+article:first-of-type button {
+    color: var(--bright-orange);
+}
+
+article:nth-of-type(2) button {
+    color: var(--dark-cyan);
+}
+
+article:last-of-type button {
+    color: var(--very-dark-cyan);
+}
+
+button {
+    /* typograohie */
+    font-family: inherit;
+    line-height: 2.5;
+    text-align: center;
+
+    background-color: var(--white);
+
+    /* size and space */
+    width: 55%;
+    max-width: 14.2rem;
+    padding: 0.5em 1em;
+
+    border: 0;
+    border-radius: 2rem;
+
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    color: black;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ######### active state ########## */
+article:first-of-type button:active {
+    background-color: var(--bright-orange);
+}
+
+article:nth-of-type(2) button:active {
+    background-color: var(--dark-cyan);
+}
+
+article:last-of-type button:active {
+    background-color: var(--very-dark-cyan);
+}
+
+article:first-of-type button:active,
+article:nth-of-type(2) button:active,
+article:last-of-type button:active {
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+/* ########## Desktop ########## */
+@media (min-width: 35em) and (orientation: landscape) {
+    body {
+        width: 80%;
+        margin: 20vh auto 15vh auto;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        min-width: 33%;
+    }
+
+    article:first-of-type {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-top-right-radius: 0;
+    }
+
+    article:last-of-type {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+    }
+
+    button {
+        width: 83%;
+    }
+
+    article div:last-of-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 0 auto;
+    }
+
+    article div:last-of-type p {
+        margin-top: 0;
+    }
+
+    article h1 {
+        padding-top: 1rem;
+    }
+}

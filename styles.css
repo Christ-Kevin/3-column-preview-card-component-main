@@ -186,7 +186,7 @@ article:last-of-type button:active {
 }
 
 /* ########## Desktop ########## */
-@media (min-width: 35em) and (orientation: landscape) {
+@media (min-width: 41em) and (orientation: landscape) {
     body {
         width: 80%;
         margin: 20vh auto 15vh auto;

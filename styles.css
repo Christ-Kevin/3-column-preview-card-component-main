@@ -79,21 +79,21 @@ p {
     margin-bottom: 2.3rem;
 }
 
-div.luxury {
+.luxury {
     background-image: url(images/icon-luxury.svg);
 }
 
-div.sedans {
+.sedans {
     background-image: url(images/icon-sedans.svg);
 }
 
-div.suvs {
+.suvs {
     background-image: url(images/icon-suvs.svg);
 }
 
-div.luxury,
-div.sedans,
-div.suvs {
+.luxury,
+.sedans,
+.suvs {
     /* size and space */
     width: 30%;
     max-width: 13rem;
@@ -124,23 +124,24 @@ article {
     padding: 4rem 4rem 4rem 4rem;
 }
 
-article:first-of-type button {
+article:first-of-type a {
     color: var(--bright-orange);
 }
 
-article:nth-of-type(2) button {
+article:nth-of-type(2) a {
     color: var(--dark-cyan);
 }
 
-article:last-of-type button {
+article:last-of-type a {
     color: var(--very-dark-cyan);
 }
 
-button {
+article a {
     /* typograohie */
     font-family: inherit;
     line-height: 2.5;
     text-align: center;
+    text-decoration: none;
 
     background-color: var(--white);
 
@@ -155,32 +156,30 @@ button {
     cursor: pointer;
 }
 
-.attribution {
+footer {
     font-size: 1.1rem;
     text-align: center;
     color: black;
 }
 
-.attribution a {
+footer a {
     color: hsl(228, 45%, 44%);
 }
 
 /* ######### active state ########## */
-article:first-of-type button:active {
+article:first-of-type a:hover {
     background-color: var(--bright-orange);
 }
 
-article:nth-of-type(2) button:active {
+article:nth-of-type(2) a:hover {
     background-color: var(--dark-cyan);
 }
 
-article:last-of-type button:active {
+article:last-of-type a:hover {
     background-color: var(--very-dark-cyan);
 }
 
-article:first-of-type button:active,
-article:nth-of-type(2) button:active,
-article:last-of-type button:active {
+article a:hover {
     color: var(--white);
     border: 1px solid var(--white);
 }
@@ -215,7 +214,7 @@ article:last-of-type button:active {
         border-bottom-left-radius: 0;
     }
 
-    button {
+    a {
         width: 83%;
     }
 

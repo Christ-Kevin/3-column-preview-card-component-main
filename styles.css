@@ -76,7 +76,7 @@ h1 {
 }
 
 p {
-    margin-bottom: 2.3rem;
+    margin-bottom: 4.3rem;
 }
 
 .luxury {
@@ -139,7 +139,7 @@ article:last-of-type a {
 article a {
     /* typograohie */
     font-family: inherit;
-    line-height: 2.2;
+    line-height: 1.7;
     text-align: center;
     text-decoration: none;
 
@@ -152,7 +152,8 @@ article a {
     border-radius: 2rem;
 
     cursor: pointer;
-    flex: 0 0 200px;
+    display:block;
+    min-width: 60%;
 }
 
 footer {
@@ -201,13 +202,10 @@ article a:hover {
         min-width: 33%;
     }
     
-    article a{     
+    article a{   
+        
     padding-left: 0.5em;
     padding-right: 0.5em;
-    }
-    
-    article p{
-        margin-bottom: 4.3rem
     }
 
     article:first-of-type {

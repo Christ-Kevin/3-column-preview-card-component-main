@@ -139,21 +139,20 @@ article:last-of-type a {
 article a {
     /* typograohie */
     font-family: inherit;
-    line-height: 2.5;
+    line-height: 2.2;
     text-align: center;
     text-decoration: none;
 
     background-color: var(--white);
 
     /* size and space */
-    width: 55%;
-    max-width: 14.2rem;
-    padding: 0.5em 1em;
-
+    max-width: 12.6rem;
+    padding: 0.5em 0.5em;
     border: 0;
     border-radius: 2rem;
 
     cursor: pointer;
+    flex: 0 0 200px;
 }
 
 footer {
@@ -166,7 +165,7 @@ footer a {
     color: hsl(228, 45%, 44%);
 }
 
-/* ######### active state ########## */
+/* ######### hover state ########## */
 article:first-of-type a:hover {
     background-color: var(--bright-orange);
 }
@@ -201,6 +200,15 @@ article a:hover {
         flex-direction: column;
         min-width: 33%;
     }
+    
+    article a{     
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    }
+    
+    article p{
+        margin-bottom: 4.3rem
+    }
 
     article:first-of-type {
         border-top-left-radius: 1rem;
@@ -214,9 +222,6 @@ article a:hover {
         border-bottom-left-radius: 0;
     }
 
-    a {
-        width: 83%;
-    }
 
     article div:last-of-type {
         display: flex;

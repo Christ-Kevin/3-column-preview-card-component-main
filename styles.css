@@ -189,12 +189,12 @@ article a:hover {
         width: 80%;
         min-width: 41em;
         min-height: 80vh;
-        margin: 0 auto;
-    }
-
-    main {     
         margin: calc(70px + 2vw) auto calc(70px + 1vw) auto;
         /* the vw value represent how many pixel are added to the margin initial value for every increased width(+100px) of the viewport */
+    }
+
+    main {
+
         display: flex;
         flex-direction: row;
     }

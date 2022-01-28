@@ -17,7 +17,6 @@
 }
 
 
-
 *,
 *:before,
 *:after {
@@ -152,7 +151,7 @@ article a {
     border-radius: 2rem;
 
     cursor: pointer;
-    display:block;
+    display: block;
     min-width: 60%;
 }
 
@@ -188,10 +187,14 @@ article a:hover {
 @media (min-width: 41em) {
     body {
         width: 80%;
-        margin: 20vh auto 15vh auto;
+        min-width: 41em;
+        min-height: 80vh;
+        margin: 0 auto;
     }
 
-    main {
+    main {     
+        margin: calc(70px + 2vw) auto calc(70px + 1vw) auto;
+        /* the vw value represent how many pixel are added to the margin initial value for every increased width(+100px) of the viewport */
         display: flex;
         flex-direction: row;
     }
@@ -201,11 +204,11 @@ article a:hover {
         flex-direction: column;
         min-width: 33%;
     }
-    
-    article a{   
-        
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+
+    article a {
+
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
 
     article:first-of-type {
